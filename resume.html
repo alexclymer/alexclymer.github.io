@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Alex Clymer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header>
+    <div class="header-logo">
+      <a href="index.html">
+        <span class="name">Alex Clymer</span>
+        <span class="tagline">Technical Writer &amp; Illustrator</span>
+      </a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE BANNER ===================== -->
+    <div class="page-banner">
+      <h1>Resume</h1>
+      <a href="files/Alexandra-Clymer-Resume.pdf" download class="btn btn-outline-white">Download CV</a>
+    </div>
+
+    <!-- ===================== SKILLS & EXPERTISE ===================== -->
+    <section class="section-wrap">
+      <h2 class="section-title">Skills &amp; Expertise</h2>
+
+      <div class="card skills-card">
+        <div class="skills-grid">
+
+          <!-- Column 1 -->
+          <div>
+            <div class="skill-group">
+              <h3>Docs-as-code</h3>
+              <ul>
+                <li>Markdown</li>
+                <li>Git version control</li>
+                <li>Static-site generators</li>
+              </ul>
+            </div>
+
+            <div class="skill-group" style="margin-top: 22px;">
+              <h3>Content Strategy</h3>
+              <ul>
+                <li>Information architecture</li>
+                <li>Content reuse</li>
+                <li>Content management systems</li>
+                <li>Diataxis</li>
+                <li>AI content optimization</li>
+              </ul>
+            </div>
+
+            <div class="skill-group" style="margin-top: 22px;">
+              <h3>Programming/Markup</h3>
+              <ul>
+                <li>XML/DITA, Markdown</li>
+                <li>HTML, CSS, Javascript</li>
+                <li>Python</li>
+                <li>Swagger/OpenAPI</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <div class="skill-group">
+              <h3>Visual Communication</h3>
+              <ul>
+                <li>Technical illustration</li>
+                <li>Hardware &amp; system diagrams</li>
+                <li>Instructional videos</li>
+              </ul>
+            </div>
+
+            <div class="skill-group" style="margin-top: 22px;">
+              <h3>Developer Documentation</h3>
+              <ul>
+                <li>API Reference Guides</li>
+                <li>Configuration Guides</li>
+                <li>Installation Manuals</li>
+                <li>Troubleshooting, FAQs</li>
+                <li>Release Notes</li>
+              </ul>
+            </div>
+
+            <div class="skill-group" style="margin-top: 22px;">
+              <h3>User Documentation</h3>
+              <ul>
+                <li>User Guides</li>
+                <li>Getting Started</li>
+                <li>Contextual Help</li>
+                <li>Knowledge Articles</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <div class="skill-group">
+              <h3>Content Development</h3>
+              <ul>
+                <li>SME interviewing</li>
+                <li>Hands-on testing of UI, API, CLI</li>
+                <li>Cross-functional collaboration</li>
+                <li>Legacy content transformation</li>
+                <li>AI chatbot response evaluation</li>
+              </ul>
+            </div>
+
+            <div class="skill-group" style="margin-top: 22px;">
+              <h3>Tools</h3>
+              <ul>
+                <li>VS Code</li>
+                <li>Oxygen XML Editor</li>
+                <li>Photoshop, Illustrator</li>
+                <li>Figma (design &amp; prototyping)</li>
+                <li>Camtasia</li>
+                <li>Confluence, JIRA</li>
+                <li>ClaudeCode, Copilot, ChatGPT</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WORK EXPERIENCE ===================== -->
+    <section class="section-wrap" style="padding-top: 0;">
+      <h2 class="section-title">Work Experience</h2>
+
+      <!-- Raytheon -->
+      <div class="card" style="margin-bottom: 16px;">
+        <div class="experience-entry">
+          <div class="experience-date">Nov 2025 –<br>Present</div>
+
+          <div>
+            <div class="experience-role">Senior Technical Writer &amp; Illustrator</div>
+            <div class="experience-org">Raytheon – Integrated Skills Development</div>
+
+            <div class="experience-project-title">Transforming Legacy Docs</div>
+            <p class="experience-text">At Raytheon's Integrated Skills Development group, I am transforming legacy documentation into a scalable docs-as-code pipeline. I developed custom Python tooling to migrate Word documentation to Markdown and generate a static HTML documentation site published on GitHub Pages.</p>
+
+            <div class="experience-project-title">Focusing on the User</div>
+            <p class="experience-text">A key focus of my work has been stepping through the applications to create documentation content while also testing usability. With the end user always in mind, I work closely with UI/UX and development teams to identify and address bugs and usability improvements.</p>
+
+            <div class="experience-project-title">Improving AI Agent Responses</div>
+            <p class="experience-text">I introduced a formal testing program to evaluate AI chatbot responses using ratings and detailed record keeping. Using the test data, I regularly restructure and iterate content for AI ingestion to improve response accuracy and the user experience with the AI agent.</p>
+
+            <div class="experience-project-title">Facilitating Collaboration</div>
+            <p class="experience-text">I drew on my experience at Oracle to help implement JIRA and Figma workflows across the broader team, driving deeper collaboration between technical documentation, software development, and UI/UX.</p>
+          </div>
+
+          <div class="experience-logo">
+            <img src="images/Raytheon-logo.png" alt="Raytheon" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Oracle -->
+      <div class="card" style="margin-bottom: 16px;">
+        <div class="experience-entry">
+          <div class="experience-date">Mar 2012 –<br>Sept 2025</div>
+
+          <div>
+            <div class="experience-role">Principal User Assistance Developer<br>(Technical Writer &amp; Illustrator)</div>
+            <div class="experience-org">Oracle Cloud Infrastructure (OCI)</div>
+
+            <p class="experience-text">Developed and maintained customer-facing documentation for cloud services (including user guides, API documentation, troubleshooting, and release notes). Configured Oracle Linux cloud compute instances to create preview environments to conduct hands-on testing to validate UI, API, and CLI. Collaborated directly with SMEs (developers, product management, and support teams) to create and refine content.</p>
+
+            <ul class="experience-bullets">
+              <li>Experienced in docs-as-code workflows. Worked daily with Git (Bitbucket &amp; GitLab) using both the command line and Oxygen plugin. Used a shared repository to collaborate with other writers. Published content using in-house tooling.</li>
+              <li>Wrote Python script to automate Oracle Linux image release notes generation reducing a task that took 5 hours to 15 minutes.</li>
+              <li>Improved AI chatbot accuracy by 25% by optimizing documentation for AI consumption through response testing and content iteration.</li>
+              <li>Edited and enhanced Swagger/OpenAPI specifications. Worked with developers to add SDK examples. Reviewed 1200+ description statements to improve the API reference guide.</li>
+              <li>Used AI assist tools to review and develop new content, summarize SME demos, and analyze code for API documentation.</li>
+              <li>Onboarded and mentored new writers on the OCI toolset, Git workflows, and publication processes. Maintained internal Confluence procedures for publication processes and best practices for the DITA open toolkit, content reuse, tasked-based authoring, and template usage.</li>
+            </ul>
+
+            <div class="experience-project-title">Linux and Virtualization Training Group</div>
+            <p class="experience-text">Created how-to videos using Camtasia and Snagit. Experimented with Oracle Linux compute instances and learned Linux concepts to develop course material. Produced the videos end-to-end by capturing screens, recording audio, creating visual aids, and editing.</p>
+            <ul class="experience-bullets">
+              <li>Developed Introduction to Oracle Linux YouTube course.</li>
+              <li>Directed process improvements for video production. Created templates and wrote guidance on best practices for audio and video capture.</li>
+            </ul>
+
+            <div class="experience-project-title">StorageTek Tape Storage</div>
+            <p class="experience-text">Developed and maintained customer-facing documentation (user's guides, installation guides, release notes, online help, etc.) for both hardware and software tape storage products, including APIs and web-based GUIs. Created technical illustrations using Photoshop/Illustrator and digital photography for the entire writing team.</p>
+            <ul class="experience-bullets">
+              <li>Worked with subject matter experts to develop content and verify technical accuracy of documentation.</li>
+              <li>Developed how-to videos for product software. Experience with video screen capture software and creating detailed product diagrams by photographing hardware products.</li>
+              <li>Reworked pre-existing content to reduce word count by 50% and significantly reduce translation cost.</li>
+              <li>Converted documentation from unstructured to structured XML, developed new templates, and updated HTML style using CSS.</li>
+              <li>Converted documentation from structured FrameMaker to Oxygen DITA.</li>
+            </ul>
+          </div>
+
+          <div class="experience-logo">
+            <img src="images/Oracle-logo.png" alt="Oracle" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Apogee Scientific -->
+      <div class="card" style="margin-bottom: 16px;">
+        <div class="experience-entry">
+          <div class="experience-date">Aug 2010 –<br>March 2012</div>
+
+          <div>
+            <div class="experience-role">Project Engineer</div>
+            <div class="experience-org">Apogee Scientific</div>
+
+            <p class="experience-text">Performed mercury emissions testing at coal-fired power plants and operated packed-bed mercury laboratory. Completed site visits to evaluate future test sites, develop test plans, order equipment, conduct instrument setup and maintenance, manage subcontracted test crews, and coordinate with clients to meet test specifications.</p>
+
+            <ul class="experience-bullets">
+              <li>Wrote final technical reports for full-scale mercury testing and laboratory testing.</li>
+              <li>Rewrote outdated user's guide for in-house mercury monitor, creating detailed diagrams and flow charts of equipment.</li>
+              <li>Designed sales pamphlet to showcase capabilities of FTIR testing equipment.</li>
+            </ul>
+          </div>
+
+          <!-- No logo for this entry -->
+          <div class="experience-logo"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section-wrap" style="padding-top: 0;">
+      <h2 class="section-title">Education</h2>
+
+      <div class="card">
+        <div class="education-entry">
+          <div class="education-date">2006 – 2010</div>
+          <div>
+            <div class="education-degree">B.S. Mechanical Engineering</div>
+            <div class="education-school">Colorado School of Mines</div>
+            <div class="education-gpa">4.0 GPA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:alex.l.clymer@gmail.com" class="footer-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        alex.l.clymer@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/alex-clymer" target="_blank" rel="noopener" class="footer-link">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        www.linkedin.com/in/alex-clymer
+      </a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Alex Clymer</span>
+  </footer>
+
+</body>
+</html>
