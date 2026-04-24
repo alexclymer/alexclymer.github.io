@@ -26,9 +26,17 @@
   /* Typography */
   --font: 'Avenir Next', 'Avenir', 'Nunito', 'Helvetica Neue', Arial, sans-serif;
 
+  /* Type scale — adjust these to resize text site-wide */
+  --text-xs:  0.8rem;    /* dates, metadata, tiny labels  */
+  --text-sm:  0.9rem;    /* secondary UI, buttons, footer */
+  --text-md:  1.2rem;    /* subheadings (role, degree)    */
+  --text-lg:  1.6rem;    /* card/section headings         */
+  --text-xl:  2rem;      /* major section titles          */
+  --text-2xl: 3.5rem;    /* page h1s                      */
+
   /* Layout */
-  --max-width:      1060px;
-  --header-height:  80px;
+  --max-width:      1280px;
+  --header-height:  100px;
   --pad-v:          60px;
   --pad-h:          40px;
 }
@@ -44,7 +52,7 @@ body {
   font-family: var(--font);
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -84,13 +92,13 @@ header {
 
 .header-logo .name {
   display: block;
-  font-size: 1.25rem;
+  font-size: var(--text-xl);
   font-weight: 700;
 }
 
 .header-logo .tagline {
   display: block;
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-text-muted);
 }
@@ -104,14 +112,17 @@ nav ul {
 nav ul li { display: flex; align-items: center; }
 
 nav ul li + li::before {
-  content: '|';
-  color: var(--color-card-border);
-  margin: 0 14px;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 28px;
+  background-color: var(--color-text-muted);
+  margin: 0 22px;
 }
 
 nav ul li a {
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: var(--text-md);
   font-weight: 500;
   color: var(--color-text);
   padding: 4px 0;
@@ -154,10 +165,68 @@ nav ul li a.active { color: var(--color-accent); }
 }
 
 .page-banner h1 {
-  font-size: 3.5rem;
+  font-size: var(--text-2xl);
   font-weight: 600;
   color: var(--color-white);
   letter-spacing: -1px;
+}
+
+/* ============================================================
+   JUMP STRIP
+   ============================================================ */
+.jump-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  padding: 14px max(var(--pad-h), calc((100% - var(--max-width)) / 2 + var(--pad-h)));
+  background-color: var(--color-card-bg);
+  border-bottom: 1px solid var(--color-card-border);
+  font-size: 1rem;
+}
+
+.jump-label {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-right: 4px;
+}
+
+.jump-strip a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.jump-strip a:hover {
+  color: var(--color-accent);
+}
+
+.jump-divider {
+  color: var(--color-text-muted);
+  font-weight: 700;
+}
+
+.jump-sub-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.jump-sub-paren {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.jump-sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.jump-sub:hover { color: var(--color-accent); }
+
+.jump-sub-divider {
+  color: var(--color-card-border);
+  font-size: var(--text-sm);
 }
 
 /* ============================================================
@@ -167,33 +236,39 @@ nav ul li a.active { color: var(--color-accent); }
   display: inline-block;
   padding: 13px 26px;
   font-family: var(--font);
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  border: none;
-  transition: opacity 0.2s;
+  border: 1.5px solid transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   letter-spacing: 0.3px;
 }
-
-.btn:hover { opacity: 0.82; }
 
 .btn-dark {
   background-color: var(--color-black);
   color: var(--color-white);
+  border-color: var(--color-black);
 }
 
-.btn-dark:hover { color: var(--color-white); }
+.btn-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  border-color: var(--color-accent);
+}
 
 .btn-outline-white {
   background: transparent;
   color: var(--color-white);
   border: 1.5px solid var(--color-white);
-  border-radius: 30px;
   padding: 9px 22px;
 }
 
-.btn-outline-white:hover { color: var(--color-white); }
+.btn-outline-white:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-black);
+}
 
 .btn-icon {
   display: inline-flex;
@@ -203,7 +278,7 @@ nav ul li a.active { color: var(--color-accent); }
   color: var(--color-white);
   padding: 12px 20px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   font-weight: 600;
   border-radius: 4px;
   transition: opacity 0.2s;
@@ -234,14 +309,14 @@ footer {
   gap: 10px;
   text-decoration: none;
   color: var(--color-text);
-  font-size: 0.88rem;
+  font-size: 1rem;
   transition: color 0.2s;
 }
 
 .footer-link:hover { color: var(--color-accent); }
 .footer-link svg { width: 18px; height: 18px; flex-shrink: 0; }
 
-.footer-copy { font-size: 0.82rem; color: var(--color-text-muted); }
+.footer-copy { font-size: 1rem; color: var(--color-text-muted); }
 
 /* ============================================================
    SECTION WRAPPER
@@ -252,8 +327,10 @@ footer {
   padding: var(--pad-v) var(--pad-h);
 }
 
+.section-wrap--no-top { padding-top: 0; }
+
 .section-title {
-  font-size: 2rem;
+  font-size: var(--text-xl);
   font-weight: 600;
   margin-bottom: 30px;
   letter-spacing: -0.5px;
@@ -286,8 +363,8 @@ footer {
 
 .hero-photo img,
 .hero-photo .photo-placeholder {
-  width: 310px;
-  height: 310px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -304,7 +381,7 @@ footer {
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: var(--text-2xl);
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: -3px;
@@ -312,20 +389,25 @@ footer {
 }
 
 .hero-text .subtitle {
-  font-size: 1.05rem;
+  font-size: var(--text-md);
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .hero-text .bio {
-  font-size: 0.92rem;
   color: var(--color-text-muted);
   margin-bottom: 30px;
   line-height: 1.75;
-  max-width: 380px;
+  max-width: 480px;
 }
 
-.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.hero-buttons .btn { flex: 1; text-align: center; }
 
 /* ============================================================
    HOME — WHAT MAKES ME UNIQUE
@@ -340,35 +422,45 @@ footer {
 .unique-left {
   background-color: var(--color-black);
   color: var(--color-white);
-  padding: 60px 50px;
-  display: flex;
-  flex-direction: row;
+  padding: 60px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 48px;
+  gap: 60px;
 }
 
 .unique-content {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  flex: 1;
 }
 
 .unique-left h2 {
-  font-size: 1.8rem;
+  font-size: var(--text-xl);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.5px;
 }
 
 .unique-left p {
-  font-size: 0.92rem;
   line-height: 1.75;
   color: rgba(255,255,255,0.82);
 }
 
+.unique-left p + p { margin-top: 16px; }
+
+.unique-list {
+  list-style: disc;
+  padding-left: 36px;
+  margin: 2px 0 10px;
+}
+
+.unique-list li {
+  color: rgba(255,255,255,0.82);
+  line-height: 1.4;
+}
+
 .unique-image {
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,7 +476,7 @@ footer {
    RESUME — SKILLS GRID
    ============================================================ */
 .skills-card {
-  padding: 32px;
+  padding: 32px 56px;
 }
 
 .skills-grid {
@@ -394,19 +486,22 @@ footer {
 }
 
 .skill-group h3 {
-  font-size: 0.92rem;
+  font-size: var(--text-md);
   font-weight: 700;
   margin-bottom: 8px;
   color: var(--color-text);
 }
 
+.skill-group + .skill-group { margin-top: 22px; }
+
 .skill-group ul { list-style: disc; padding-left: 18px; }
 
 .skill-group ul li {
-  font-size: 0.875rem;
   line-height: 1.85;
   color: var(--color-text-muted);
 }
+
+.experience-card { margin-bottom: 16px; }
 
 /* ============================================================
    RESUME — WORK EXPERIENCE
@@ -419,34 +514,31 @@ footer {
 }
 
 .experience-date {
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
   padding-top: 3px;
   line-height: 1.5;
 }
 
 .experience-role {
-  font-size: 1.05rem;
+  font-size: var(--text-lg);
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .experience-org {
-  font-size: 0.88rem;
   font-style: italic;
   color: var(--color-text-muted);
   margin-bottom: 16px;
 }
 
 .experience-project-title {
-  font-size: 0.9rem;
   font-weight: 700;
   margin-top: 16px;
   margin-bottom: 5px;
 }
 
 .experience-text {
-  font-size: 0.88rem;
   line-height: 1.75;
   color: var(--color-text-muted);
   margin-bottom: 8px;
@@ -455,7 +547,6 @@ footer {
 .experience-bullets { list-style: disc; padding-left: 20px; margin-bottom: 10px; }
 
 .experience-bullets li {
-  font-size: 0.88rem;
   line-height: 1.75;
   color: var(--color-text-muted);
   margin-bottom: 3px;
@@ -494,18 +585,18 @@ footer {
   padding: 32px;
 }
 
-.education-date { font-size: 0.82rem; color: var(--color-text-muted); }
+.education-date { font-size: 1rem; color: var(--color-text-muted); }
 
-.education-degree { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.education-degree { font-size: var(--text-md); font-weight: 700; margin-bottom: 4px; }
 
 .education-school {
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-style: italic;
   color: var(--color-text-muted);
   margin-bottom: 4px;
 }
 
-.education-gpa { font-size: 0.88rem; color: var(--color-text-muted); }
+.education-gpa { font-size: 1rem; color: var(--color-text-muted); }
 
 /* ============================================================
    PORTFOLIO
@@ -522,7 +613,7 @@ footer {
   margin-bottom: 22px;
 }
 
-.portfolio-header h2 { font-size: 1.4rem; font-weight: 600; }
+.portfolio-header h2 { font-size: var(--text-lg); font-weight: 600; }
 .portfolio-header svg { width: 32px; height: 32px; flex-shrink: 0; }
 .portfolio-header-icon { width: 32px; height: 32px; flex-shrink: 0; object-fit: contain; }
 
@@ -534,17 +625,16 @@ footer {
 }
 
 .portfolio-desc {
-  font-size: 0.9rem;
   line-height: 1.75;
   color: var(--color-text-muted);
   margin-bottom: 18px;
 }
 
-.portfolio-links-label { font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; }
+.portfolio-links-label { font-weight: 700; margin-bottom: 8px; }
 
 .portfolio-links-list { list-style: disc; padding-left: 18px; }
 
-.portfolio-links-list li { font-size: 0.88rem; line-height: 1.85; }
+.portfolio-links-list li { line-height: 1.85; }
 
 .portfolio-sidebar {
   background: var(--color-card-bg);
@@ -558,15 +648,18 @@ footer {
   align-items: center;
   gap: 10px;
   font-weight: 700;
-  font-size: 0.95rem;
   margin-bottom: 16px;
 }
 
 .sidebar-heading svg { width: 20px; height: 20px; flex-shrink: 0; }
 
-.sidebar-list { list-style: disc; padding-left: 18px; }
+.sidebar-list { list-style: disc; padding-left: 18px; margin-bottom: 14px; }
 
-.sidebar-list li { font-size: 0.875rem; line-height: 1.9; }
+.sidebar-list li { line-height: 1.9; }
+
+.sidebar-text { color: var(--color-text-muted); margin-bottom: 14px; }
+
+.sidebar-footer { color: var(--color-text-muted); }
 
 .youtube-embed {
   width: 100%;
@@ -624,7 +717,7 @@ footer {
   align-items: start;
 }
 
-.contact-info h1 { font-size: 2rem; font-weight: 600; margin-bottom: 10px; letter-spacing: -1px; }
+.contact-info h1 { font-size: var(--text-xl); font-weight: 600; margin-bottom: 10px; letter-spacing: -1px; }
 
 .contact-tagline { font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 30px; }
 
@@ -700,7 +793,7 @@ footer {
   .hero-buttons { justify-content: center; }
   .hero-photo { justify-content: center; }
 
-  .unique-left { flex-direction: column; text-align: center; }
+  .unique-left { grid-template-columns: 1fr; text-align: center; }
   .unique-image img { width: 200px; }
 
   .skills-grid { grid-template-columns: 1fr 1fr; }
