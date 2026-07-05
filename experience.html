@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume — Alex Clymer</title>
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <title>Experience — Alex Clymer</title>
+  <link rel="stylesheet" href="styles.css?v=10" />
   <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
@@ -25,7 +25,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
       </ul>
     </nav>
@@ -35,8 +35,7 @@
 
     <!-- ===================== PAGE BANNER ===================== -->
     <div class="page-banner">
-      <h1>Resume</h1>
-      <a href="files/Alexandra-Clymer-Resume.pdf" download class="btn btn-outline-white">Download CV</a>
+      <h1>Experience</h1>
     </div>
 
     <!-- ===================== JUMP STRIP ===================== -->
@@ -58,8 +57,13 @@
       <a href="#education">Education</a>
     </nav>
 
+    <!-- ===================== RESUME CTA ===================== -->
+    <div class="resume-cta-wrap">
+      <a href="files/Alexandra-Clymer-Resume.pdf" download class="btn btn-dark">Download CV</a>
+    </div>
+
     <!-- ===================== SKILLS & EXPERTISE ===================== -->
-    <section class="section-wrap" id="skills">
+    <section class="section-wrap section-wrap--no-top" id="skills">
       <h2 class="section-title">Skills &amp; Expertise</h2>
 
       <div class="card skills-card fade-in">
@@ -169,10 +173,12 @@
       <!-- Raytheon -->
       <div class="card experience-card fade-in" id="raytheon">
         <div class="experience-entry">
-          <div class="experience-date">Nov 2025 –<br>Present</div>
+          <div class="experience-logo">
+            <img src="images/Raytheon-logo.png" alt="Raytheon" />
+          </div>
 
           <div>
-            <div class="experience-role">Senior Technical Writer &amp; Illustrator</div>
+            <div class="experience-role">Senior Technical Writer &amp; Illustrator <span class="experience-subdate">(Nov 2025 – Present)</span></div>
             <div class="experience-org">Raytheon – Integrated Skills Development</div>
 
             <div class="experience-project-title">Transforming Legacy Docs</div>
@@ -187,21 +193,20 @@
             <div class="experience-project-title">Facilitating Collaboration</div>
             <p class="experience-text">I drew on my experience at Oracle to help implement JIRA and Figma workflows across the broader team, driving deeper collaboration between technical documentation, software development, and UI/UX.</p>
           </div>
-
-          <div class="experience-logo">
-            <img src="images/Raytheon-logo.png" alt="Raytheon" />
-          </div>
         </div>
       </div>
 
       <!-- Oracle -->
       <div class="card experience-card fade-in" id="oracle">
         <div class="experience-entry">
-          <div class="experience-date">Mar 2012 –<br>Sept 2025</div>
+          <div class="experience-logo">
+            <img src="images/Oracle-logo.png" alt="Oracle" />
+          </div>
 
           <div>
-            <div class="experience-role">Principal User Assistance Developer<br>(Technical Writer &amp; Illustrator)</div>
-            <div class="experience-org">Oracle Cloud Infrastructure (OCI)</div>
+            <div class="experience-role">Principal User Assistance Developer<br>(Technical Writer &amp; Illustrator) <span class="experience-subdate">(Mar 2012 – Sept 2025)</span></div>
+            <div class="experience-org">Oracle Corporation</div>
+            <div class="experience-project-title">Oracle Cloud Infrastructure (OCI) <span class="experience-subdate">(2021 – 2025)</span></div>
 
             <p class="experience-text">Developed and maintained customer-facing documentation for cloud services (including user guides, API documentation, troubleshooting, and release notes). Configured Oracle Linux cloud compute instances to create preview environments to conduct hands-on testing to validate UI, API, and CLI. Collaborated directly with SMEs (developers, product management, and support teams) to create and refine content.</p>
 
@@ -214,26 +219,26 @@
               <li>Onboarded and mentored new writers on the OCI toolset, Git workflows, and publication processes. Maintained internal Confluence procedures for publication processes and best practices for the DITA open toolkit, content reuse, tasked-based authoring, and template usage.</li>
             </ul>
 
-            <div class="experience-project-title">Linux and Virtualization Training Group</div>
-            <p class="experience-text">Created how-to videos using Camtasia and Snagit. Experimented with Oracle Linux compute instances and learned Linux concepts to develop course material. Produced the videos end-to-end by capturing screens, recording audio, creating visual aids, and editing.</p>
-            <ul class="experience-bullets">
-              <li>Developed Introduction to Oracle Linux YouTube course.</li>
-              <li>Directed process improvements for video production. Created templates and wrote guidance on best practices for audio and video capture.</li>
-            </ul>
+            <div class="experience-subsection">
+              <div class="experience-project-title">Linux and Virtualization Training Group <span class="experience-subdate">(2021)</span></div>
+              <p class="experience-text">Created how-to videos using Camtasia and Snagit. Experimented with Oracle Linux compute instances and learned Linux concepts to develop course material. Produced the videos end-to-end by capturing screens, recording audio, creating visual aids, and editing.</p>
+              <ul class="experience-bullets">
+                <li>Developed Introduction to Oracle Linux YouTube course.</li>
+                <li>Directed process improvements for video production. Created templates and wrote guidance on best practices for audio and video capture.</li>
+              </ul>
+            </div>
 
-            <div class="experience-project-title">StorageTek Tape Storage</div>
-            <p class="experience-text">Developed and maintained customer-facing documentation (user's guides, installation guides, release notes, online help, etc.) for both hardware and software tape storage products, including APIs and web-based GUIs. Created technical illustrations using Photoshop/Illustrator and digital photography for the entire writing team.</p>
-            <ul class="experience-bullets">
-              <li>Worked with subject matter experts to develop content and verify technical accuracy of documentation.</li>
-              <li>Developed how-to videos for product software. Experience with video screen capture software and creating detailed product diagrams by photographing hardware products.</li>
-              <li>Reworked pre-existing content to reduce word count by 50% and significantly reduce translation cost.</li>
-              <li>Converted documentation from unstructured to structured XML, developed new templates, and updated HTML style using CSS.</li>
-              <li>Converted documentation from structured FrameMaker to Oxygen DITA.</li>
-            </ul>
-          </div>
-
-          <div class="experience-logo">
-            <img src="images/Oracle-logo.png" alt="Oracle" />
+            <div class="experience-subsection">
+              <div class="experience-project-title">StorageTek Tape Storage <span class="experience-subdate">(2012 – 2020)</span></div>
+              <p class="experience-text">Developed and maintained customer-facing documentation (user's guides, installation guides, release notes, online help, etc.) for both hardware and software tape storage products, including APIs and web-based GUIs. Created technical illustrations using Photoshop/Illustrator and digital photography for the entire writing team.</p>
+              <ul class="experience-bullets">
+                <li>Worked with subject matter experts to develop content and verify technical accuracy of documentation.</li>
+                <li>Developed how-to videos for product software. Experience with video screen capture software and creating detailed product diagrams by photographing hardware products.</li>
+                <li>Reworked pre-existing content to reduce word count by 50% and significantly reduce translation cost.</li>
+                <li>Converted documentation from unstructured to structured XML, developed new templates, and updated HTML style using CSS.</li>
+                <li>Converted documentation from structured FrameMaker to Oxygen DITA.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -241,10 +246,11 @@
       <!-- Apogee Scientific -->
       <div class="card experience-card fade-in" id="apogee">
         <div class="experience-entry">
-          <div class="experience-date">Aug 2010 –<br>March 2012</div>
+          <!-- No logo for this entry -->
+          <div class="experience-logo"></div>
 
           <div>
-            <div class="experience-role">Project Engineer</div>
+            <div class="experience-role">Project Engineer <span class="experience-subdate">(Aug 2010 – March 2012)</span></div>
             <div class="experience-org">Apogee Scientific</div>
 
             <p class="experience-text">Performed mercury emissions testing at coal-fired power plants and operated packed-bed mercury laboratory. Completed site visits to evaluate future test sites, develop test plans, order equipment, conduct instrument setup and maintenance, manage subcontracted test crews, and coordinate with clients to meet test specifications.</p>
@@ -255,9 +261,6 @@
               <li>Designed sales pamphlet to showcase capabilities of FTIR testing equipment.</li>
             </ul>
           </div>
-
-          <!-- No logo for this entry -->
-          <div class="experience-logo"></div>
         </div>
       </div>
 

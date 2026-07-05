@@ -172,6 +172,15 @@ nav ul li a.active { color: var(--color-accent); }
 }
 
 /* ============================================================
+   RESUME CTA
+   ============================================================ */
+.resume-cta-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px var(--pad-h) 30px;
+}
+
+/* ============================================================
    JUMP STRIP
    ============================================================ */
 .jump-strip {
@@ -332,9 +341,10 @@ footer {
 .section-title {
   font-size: var(--text-xl);
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
+
 
 /* Card */
 .card {
@@ -508,16 +518,9 @@ footer {
    ============================================================ */
 .experience-entry {
   display: grid;
-  grid-template-columns: 140px 1fr auto;
+  grid-template-columns: 130px 1fr;
   gap: 24px;
   padding: 32px;
-}
-
-.experience-date {
-  font-size: 1rem;
-  color: var(--color-text-muted);
-  padding-top: 3px;
-  line-height: 1.5;
 }
 
 .experience-role {
@@ -544,6 +547,19 @@ footer {
   margin-bottom: 8px;
 }
 
+.experience-subsection {
+  border-top: 1px solid var(--color-card-border);
+  margin-top: 28px;
+  padding-top: 20px;
+}
+
+.experience-subdate {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
 .experience-bullets { list-style: disc; padding-left: 20px; margin-bottom: 10px; }
 
 .experience-bullets li {
@@ -555,7 +571,7 @@ footer {
 .experience-logo {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding-top: 2px;
 }
 
@@ -818,7 +834,6 @@ footer {
   .skills-grid { grid-template-columns: 1fr 1fr; }
 
   .experience-entry { grid-template-columns: 1fr; gap: 12px; }
-  .experience-logo { justify-content: flex-start; }
 
   .education-entry { grid-template-columns: 1fr; gap: 8px; }
 
